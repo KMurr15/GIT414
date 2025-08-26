@@ -93,12 +93,31 @@ h1, nav, p {
     padding: 1em;
 }
 
+h1 {
+    animation: 6s color-shift ease-in-out 300ms infinite normal;
+}
+
+@keyframes color-shift {
+    0%   {color: var(--seasalt)}
+    25%  {color: var(--lemon-chiffon)}
+    50%  {color: var(--bittersweet)}
+    75%  {color: var(--ash-gray)}
+    100% {color: var(--seasalt)}
+}
+
 a {
     background-color: var(--bittersweet);
     color: var(--seasalt);
     font-weight: bold;
     padding: 0.5em 0.75em;
     border-radius: 3px;
+    box-shadow: 3px 3px 3px black;
+}
+
+a:hover {
+    background-color: var(--ash-gray);
+    color: var(--davys-gray);
+    box-shadow: 1px 1px 1px black;
 }
 
 nav ul {
