@@ -51,21 +51,64 @@ table {
 }
 
 /* ----- ROOT VARIABLES ----- */
+:root {
+    /* --- Colors --- */
+    --bittersweet: #ED6A5A;
+    --lemon-chiffon: #F4F1BB;
+    --ash-gray: #9BC1BC;
+    --davys-gray: #585365;
+    --alabaster: #E6EBE0;
+    --seasalt: #F7F7F8;
+}
 
 /* ----- GLOBAL ----- */
+html {
+    background: var(--seasalt);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+header, footer {
+    background-color: var(--davys-gray);
+    color: var(--seasalt);
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+h1, nav, p {
+    text-align: center;
+    padding: 1em;
+}
+
+a {
+    background-color: var(--bittersweet);
+    color: var(--seasalt);
+    font-weight: bold;
+    padding: 0.5em 0.75em;
+    border-radius: 3px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 /* ----- MEDIUM SCREENS ----- */
 @media only screen and (min-width: 600px) {
-    nav ul {
-        display: flex;
-        gap: 1rem;
-    }
-
     main {
         background-color: yellow;
     }
@@ -84,6 +127,7 @@ body {
 
     main {
         background: blue;
+        color: var(--seasalt);
     }
 }
 
